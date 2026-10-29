@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Love ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff0f8;
+    background: #17091f;
+    overflow-x: hidden;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff22;
+    z-index: 10;
+}
+
+.logo {
+    font: 28px 'Dancing Script', cursive;
+    color: #ffb0dc;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 12px;
+}
+
+.hero {
+    min-height: 690px;
+    padding: 125px 8% 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    background:
+        linear-gradient(90deg, #17091ff5, #35112bb8, #17091f66),
+        url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.tag {
+    letter-spacing: 3px;
+    font-size: 10px;
+    color: #ffacd9;
+}
+
+h1 {
+    font: clamp(52px, 7vw, 85px)/1 'Dancing Script', cursive;
+    color: #ffb2dc;
+    margin: 24px 0;
+    text-shadow: 0 0 28px #ff48b5aa;
+}
+
+.hero-text > p {
+    font-size: 13px;
+    line-height: 2;
+    max-width: 390px;
+    color: #ffe2f1;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 40px;
+    padding: 15px 25px;
+    background: linear-gradient(120deg, #ff9ed2, #ffcae8);
+    color: #55153e;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px #ff80c9;
+}
+
+/* GIRLFRIEND PHOTO */
+
+.hero-art {
+    flex-shrink: 0;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.photo-frame {
+    width: min(300px, 75vw);
+    padding: 12px 12px 20px;
+    background: linear-gradient(135deg, #fff0f8, #ffadd9);
+    border-radius: 18px;
+    box-shadow: 0 0 35px #ff65b888;
+    transform: rotate(3deg);
+    transition: .4s;
+}
+
+.photo-frame:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.photo-frame p {
+    font-family: 'Dancing Script', cursive;
+    color: #76264e;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+@keyframes float {
+    50% { transform: translateY(-12px); }
+}
+
+/* LETTER SECTION */
+
+.section {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #ffacd9;
+}
+
+h2 {
+    font: clamp(35px, 5vw, 55px) 'Dancing Script', cursive;
+    color: #ffb2dc;
+    margin: 15px 0 30px;
+}
+
+.letter-area {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 35px;
+    max-width: 950px;
+    margin: 35px auto 0;
+    align-items: center;
+}
+
+/* ENVELOPE */
+
+.envelope {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 240px;
+    margin: 25px auto;
+    background: linear-gradient(145deg, #a63279, #ff9ed2);
+    border-radius: 5px 5px 15px 15px;
+    box-shadow: 0 0 35px #ff60b533;
+    perspective: 900px;
+    cursor: pointer;
+    isolation: isolate;
+}
+
+.letter-inside {
+    position: absolute;
+    width: 86%;
+    height: 190px;
+    left: 7%;
+    bottom: 8px;
+    padding: 20px 13px;
+    border-radius: 8px;
+    background: #fff3fa;
+    color: #81335d;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.8;
+    overflow: hidden;
+    z-index: 1;
+    transform: translateY(0);
+    transition: transform 1s ease .45s;
+}
+
+.letter-inside h3 {
+    font: 26px 'Dancing Script', cursive;
+    color: #bd397e;
+    margin-bottom: 8px;
+}
+
+.letter-inside p {
+    margin-bottom: 8px;
+}
+
+.flap {
+    position: absolute;
+    inset: 0;
+    background: #ffb4dc;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    transform-origin: top center;
+    transition: transform .75s ease;
+    z-index: 4;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, #ffb1d8, #c54c94);
+    clip-path: polygon(0 100%, 0 0, 50% 55%, 100% 0, 100% 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.seal {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    z-index: 5;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+
+.envelope-label {
+    position: absolute;
+    bottom: 13px;
+    width: 100%;
+    text-align: center;
+    font: 23px 'Dancing Script', cursive;
+    color: #70234e;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.envelope.open .letter-inside {
+    transform: translateY(-72%);
+}
+
+.envelope.open .seal {
+    opacity: 0;
+}
+
+.envelope.open {
+    margin-bottom: 80px;
+}
+
+.envelope-hint {
+    font-size: 11px;
+    color: #f5c5e1;
+    margin-top: 5px;
+}
+
+.love-note {
+    text-align: center;
+    padding: 20px;
+}
+
+.love-note .rose {
+    font-size: 55px;
+}
+
+.love-note p {
+    font-size: 12px;
+    line-height: 2;
+    color: #f5c5e1;
+}
+
+/* FULL LETTER */
+
+.full-letter {
+    display: none;
+    max-width: 700px;
+    margin: 35px auto 0;
+    padding: 35px;
+    text-align: left;
+    background: #fff0f7;
+    color: #713052;
+    border-radius: 5px 25px 5px 25px;
+    box-shadow: 0 15px 50px #0005;
+    animation: appear .9s ease;
+}
+
+.full-letter.show {
+    display: block;
+}
+
+.full-letter h3 {
+    font: 38px 'Dancing Script', cursive;
+    text-align: center;
+    color: #bd397e;
+    margin-bottom: 22px;
+}
+
+.full-letter p {
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.signature {
+    font: 27px 'Dancing Script', cursive;
+    color: #bd397e;
+    text-align: right;
+    margin-top: 25px;
+}
+
+/* GIFT SURPRISE */
+
+.surprise {
+    background: radial-gradient(ellipse at center, #552044, #17091f 70%);
+    border-top: 1px solid #ffffff15;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.gift {
+    font-size: 95px;
+    animation: float 3s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+.reveal {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ff9ed255;
+    border-radius: 22px;
+    background: #ffffff0d;
+    line-height: 2;
+    font-size: 13px;
+    animation: appear .8s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    padding: 28px;
+    text-align: center;
+    font-size: 11px;
+    color: #d7a6c5;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 20;
+    animation: rise 5s linear forwards;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+    nav { padding: 18px 5%; }
+    .logo { font-size: 23px; }
+    nav a { margin-left: 9px; font-size: 10px; }
+
+    .hero {
+        min-height: auto;
+        padding: 120px 7% 65px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text > p { margin: auto; }
+    .hero-art { margin-top: 25px; }
+
+    .photo-frame img { height: 320px; }
+
+    .letter-area { grid-template-columns: 1fr; }
+    .envelope { max-width: 320px; }
+    .section { padding: 65px 6%; }
+    .full-letter { padding: 23px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Happy Birthday ♡</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#letter">Letter</a>
+        <a href="#surprise">Surprise</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <div class="tag">✦ A SPECIAL DAY FOR A SPECIAL SOUL ✦</div>
+
+        <h1>Happy Birthday,<br>My Love ♡</h1>
+
+        <p>
+            Today is not just your birthday,
+            it's a reminder of how lucky I am to have you
+            in my life. You make everything brighter,
+            softer and more beautiful. 💗
+        </p>
+
+        <a class="btn" href="#letter" onclick="openLetter(event)">
+            ♡ Open Your Letter →
+        </a>
+    </div>
+
+    <!-- YOUR GIRLFRIEND'S PHOTO -->
+
+    <div class="hero-art">
+        <div class="photo-frame">
+            <img
+                src="WhatsApp Image 2026-10-30 at 00.00.42.jpeg"
+                alt="My beautiful girl"
+            >
+            <p>My Beautiful Girl ♡</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- LETTER SECTION -->
+
+<section class="section" id="letter">
+
+    <div class="eyebrow">♡ A LETTER FROM ME ♡</div>
+    <h2>Something from my heart</h2>
+
+    <p style="font-size:12px;color:#f5c5e1;line-height:2">
+        I made something special just for you.<br>
+        Open the envelope to read my heart. 💌
+    </p>
+
+    <div class="letter-area">
+
+        <!-- ANIMATED ENVELOPE -->
+
+        <div>
+            <div class="envelope"
+                 id="loveEnvelope"
+                 onclick="toggleEnvelope()">
+
+                <div class="letter-inside">
+                    <h3>My Dearest Love 💗</h3>
+                    <p>Happy Birthday, Princess! 🎂</p>
+                    <p>You make my world more beautiful.</p>
+                    <p>You are my favorite person. ❤️</p>
+                    <p>Forever sending you love. 💌</p>
+                </div>
+
+                <div class="flap"></div>
+                <div class="envelope-front"></div>
+                <div class="seal">♥</div>
+
+                <div class="envelope-label">
+                    Just for you ♡
+                </div>
+
+            </div>
+
+            <p class="envelope-hint" id="envelopeHint">
+                💌 Click the envelope to open your letter
+            </p>
+        </div>
+
+        <div class="love-note">
+            <div class="rose">🌹</div>
+
+            <h2 style="font-size:38px;margin:15px 0">
+                A little love,<br>a little magic
+            </h2>
+
+            <p>
+                Some feelings are too special for ordinary words.
+                So I made this little corner of the internet
+                just for you. ❤️
+            </p>
+        </div>
+
+    </div>
+
+    <!-- FULL ROMANTIC LETTER -->
+
+    <div class="full-letter" id="fullLetter">
+
+        <h3>My Dearest Love 💗</h3>
+
+        <p>Happy Birthday, sweetheart! 🎂❤️</p>
+
+        <p>
+            I don't know if words will ever be enough to explain
+            how much you mean to me. But today, I want to remind
+            you that you are one of the most beautiful parts
+            of my life.
+        </p>
+
+        <p>
+            Your smile makes my days brighter, your happiness
+            means the world to me, and even the smallest moments
+            with you become memories I want to keep forever.
+        </p>
+
+        <p>
+            I wish you a life full of happiness, success, peace,
+            and all the beautiful things your heart dreams of.
+            May every new year bring you closer to everything
+            you wish for.
+        </p>
+
+        <p>
+            No matter how busy life gets, I hope you always
+            remember how precious you are and how deeply
+            you are appreciated.
+        </p>
+
+        <p>
+            Today is your day, my princess.
+            Smile a little more, laugh a little louder,
+            and make the sweetest memories. 🌸
+        </p>
+
+        <p>
+            Thank you for being you.
+            Thank you for the smiles, the little moments,
+            and all the happiness you bring into my world.
+        </p>
+
+        <p>
+            Happy Birthday, my favorite person.
+            I hope this new chapter of your life is filled
+            with beautiful surprises, endless happiness,
+            and countless reasons to smile. 💕
+        </p>
+
+        <div class="signature">
+            With all my love,<br>
+            Your Favorite Person ❤️
+        </div>
+
+        <div style="text-align:center;margin-top:25px">
+            <button class="btn" onclick="hearts()">
+                Send You Some Love 💗
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BIRTHDAY GIFT -->
+
+<section class="section surprise" id="surprise">
+
+    <div class="eyebrow">♡ ONE LAST SURPRISE ♡</div>
+    <h2>One Wish, Just for You</h2>
+
+    <div class="gift">🎁</div>
+
+    <p style="font-size:13px;line-height:2">
+        There is one little surprise waiting just for you...
+    </p>
+
+    <button class="btn" onclick="reveal()">
+        Open Your Gift ✨
+    </button>
+
+    <div class="reveal hidden" id="giftMessage">
+
+        <h2>You Are My Favorite Person 💖</h2>
+
+        <p>
+            If I could make one wish tonight, I would wish
+            for a thousand more birthdays where I get
+            to see you smile. 🥹
+        </p>
+
+        <p style="margin-top:20px">
+            You deserve the whole universe, my love.
+            And if I could, I would wrap it in a bow
+            and put it right into your hands. 🎀
+        </p>
+
+        <p style="margin-top:20px">
+            Happy Birthday, My Forever Favorite! 💋
+        </p>
+
+        <div style="font-size:35px;margin-top:20px">
+            💗 🧸 🌹 💗
+        </div>
+
+        <button class="btn" onclick="hearts()">
+            Send More Love 💗
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+    Made with all my love · Just for you ♡
+    <p style="margin-top:10px">
+        You are my favorite kind of magic ✨
+    </p>
+</footer>
+
+<script>
+
+/* OPEN LETTER FROM HERO BUTTON */
+
+function openLetter(event) {
+    event.preventDefault();
+
+    const envelope = document.getElementById("loveEnvelope");
+
+    document.getElementById("letter").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    if (!envelope.classList.contains("open")) {
+        setTimeout(function() {
+            openEnvelope();
+        }, 600);
+    } else {
+        setTimeout(function() {
+            document.getElementById("fullLetter").scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 400);
+    }
+}
+
+/* OPEN OR CLOSE THE ENVELOPE */
+
+function toggleEnvelope() {
+    const envelope = document.getElementById("loveEnvelope");
+
+    if (envelope.classList.contains("open")) {
+        envelope.classList.remove("open");
+        document.getElementById("fullLetter").classList.remove("show");
+
+        document.getElementById("envelopeHint").textContent =
+            "💌 Click the envelope to open your letter";
+    } else {
+        openEnvelope();
+    }
+}
+
+/* LETTER EMERGES FROM ENVELOPE */
+
+function openEnvelope() {
+    const envelope = document.getElementById("loveEnvelope");
+    const fullLetter = document.getElementById("fullLetter");
+    const hint = document.getElementById("envelopeHint");
+
+    if (envelope.classList.contains("open")) return;
+
+    envelope.classList.add("open");
+    hint.textContent = "💗 Your letter is opening...";
+
+    hearts();
+
+    setTimeout(function() {
+        fullLetter.classList.add("show");
+
+        hint.textContent =
+            "♡ Your letter is open. Click the envelope to close it.";
+
+        fullLetter.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    }, 1500);
+}
+
+/* OPEN GIFT */
+
+function reveal() {
+    document.getElementById("giftMessage").classList.remove("hidden");
+
+    document.getElementById("giftMessage").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    hearts();
+}
+
+/* FLOATING HEARTS */
+
+function hearts() {
+    for (let i = 0; i < 30; i++) {
+        let heart = document.createElement("span");
+
+        heart.className = "heart";
+        heart.textContent = [
+            "💗", "💕", "💖", "✨", "🌸", "♥"
+        ][Math.floor(Math.random() * 6)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (15 + Math.random() * 22) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function() {
+            heart.remove();
+        }, 7500);
+    }
+}
+
+/* BACKGROUND HEARTS */
+
+setInterval(function() {
+    let heart = document.createElement("span");
+
+    heart.className = "heart";
+    heart.textContent = "♥";
+    heart.style.color = "#ff8bc9";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = "15px";
+    heart.style.animationDuration = "6s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 6500);
+}, 1200);
+
+</script>
+
+</body>
+</html>
